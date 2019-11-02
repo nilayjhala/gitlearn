@@ -1,0 +1,14 @@
+import json
+#arr = [10, 22, 33]
+sumarr = 0
+def calculate_mean(arr):
+    avg=0
+    for elem in arr:
+        avg += elem
+    avg = avg/len(arr)
+    return avg
+arr = input('Enter the array: ')
+## {"arr":[10,22,33]}
+arr_dict = json.loads(arr)
+arr_mean = calculate_mean(arr_dict['arr'])
+print('Mean of Array is', arr_mean)
